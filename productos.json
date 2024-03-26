@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nombre": "Tomate",
+    "precio": 20.99,
+    "descripcion": "Tomate rojo de la huerta",
+    "imagen": "imagenes/tomate.jpg"
+},
+  {
+    "id": 2,
+    "nombre": "Lechuga",
+    "precio": 34.99,
+    "descripcion": "lechuga fresca",
+    "imagen": "imagenes/lechuga.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Ajo",
+    "precio": 49.99,
+    "descripcion": "Ajo de cosecha",
+    "imagen": "imagenes/ajo.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Zanahoria",
+    "precio": 12.99,
+    "descripcion": "Zanahoria  orgánica",
+    "imagen": "imagenes/zanahoria.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Apio",
+    "precio": 16.99,
+    "descripcion": "Apio de la huerta",
+    "imagen": "imagenes/apio.jpg"
+  }
+]
