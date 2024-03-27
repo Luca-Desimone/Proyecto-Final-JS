@@ -33,5 +33,12 @@
     "precio": 16.99,
     "descripcion": "Apio de la huerta",
     "imagen": "imagenes/apio.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Manzana",
+    "precio": 12.99,
+    "descripcion": "Manzana orgánica",
+    "imagen": "imagenes/manzana.jpg"
   }
 ]
