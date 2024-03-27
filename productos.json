@@ -29,16 +29,16 @@
   },
   {
     "id": 5,
-    "nombre": "Acelga",
+    "nombre": "Manzana",
     "precio": 16.99,
-    "descripcion": "Acelga de la huerta",
-    "imagen": "imagenes/acelga.jpg"
+    "descripcion": "Manzana orgánica",
+    "imagen": "imagenes/manzana.jpg"
   },
   {
     "id": 6,
-    "nombre": "Manzana",
+    "nombre": "Banana",
     "precio": 10.99,
-    "descripcion": "Manzana orgánica",
-    "imagen": "imagenes/manzana.jpg"
+    "descripcion": "Banana orgánica",
+    "imagen": "imagenes/banana.jpg"
   }
 ]
