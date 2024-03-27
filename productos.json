@@ -29,10 +29,10 @@
   },
   {
     "id": 5,
-    "nombre": "Apio",
+    "nombre": "Acelga",
     "precio": 16.99,
-    "descripcion": "Apio de la huerta",
-    "imagen": "imagenes/apio.jpg"
+    "descripcion": "Acelga de la huerta",
+    "imagen": "imagenes/Acelga.jpg"
   },
   {
     "id": 6,
