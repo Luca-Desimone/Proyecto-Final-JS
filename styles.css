@@ -54,8 +54,8 @@ body, html {
 }
 
 #carrito {
-    height: 200px; /* Altura fija del contenedor */
-    overflow-y: auto; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+    height: 200px; 
+    overflow-y: auto; 
     padding: 20px;
     background-color: #7cd192;
     border-radius: 5px;
