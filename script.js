@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
   let productos = [];
   let carrito = [];
 
@@ -133,4 +132,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   cargarProductos();
-});
+
