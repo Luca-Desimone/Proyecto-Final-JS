@@ -37,7 +37,7 @@
   {
     "id": 6,
     "nombre": "Manzana",
-    "precio": 12.99,
+    "precio": 10.99,
     "descripcion": "Manzana orgánica",
     "imagen": "imagenes/manzana.jpg"
   }
