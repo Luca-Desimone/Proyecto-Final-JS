@@ -6,7 +6,7 @@ body {
 
 h1 {
     text-align: center;
-    background-color: purple;
+    background-color: rgb(55, 148, 112);
     color: white;
     padding: 20px 0;
     margin: 0;
@@ -26,9 +26,7 @@ body, html {
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    height: 100%;
+    height: auto;
 }
 
 .input-section {
@@ -56,31 +54,40 @@ body, html {
 }
 
 #carrito {
-    height: 200px; 
-    overflow-y: auto; 
+    height: 200px; /* Altura fija del contenedor */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+    padding: 20px;
+    background-color: #7cd192;
+    border-radius: 5px;
 }
-
 
 #productos {
     display: grid;
     margin-top: 30px;
     grid-template-columns: repeat(3, 1fr); 
     gap: 40px; 
-    justify-content: center; 
 }
 
 .producto {
     display: flex;
-    flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%; 
+    background-color: #e9ffec;
+    border-radius: 20px;
 }
-
   .producto img {
     width: 100px;
     height: 100px;
     margin-right: 20px;
+    border-radius: 20px;
   }
+
+  .producto img {
+    width: 200px; 
+    height: 200px;
+    margin-bottom: 10px; 
+}
   
   .producto p {
     margin: 0;
@@ -117,3 +124,4 @@ body, html {
 .buttons-container button {
     margin: 0 10px;
 }
+
