@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let productos = []; 
-  let carrito = []; 
+  let productos = [];
+  let carrito = [];
 
   // Funcion para cargar los productos del carrito desde el localStorage
   function cargarProductos() {
@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
       mostrarProductosEnCarrito();
     }
 
-    fetch("productos.json") 
+    fetch("productos.json")
       .then((response) => response.json())
       .then((data) => {
-        productos = data; 
+        productos = data;
         mostrarProductos();
       })
       .catch((error) => console.error("Error al cargar los productos:", error));
@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Funcion para agregar un producto al carrito
   function agregarAlCarrito(id, nombre, precio) {
-    carrito.push({ id: id, nombre: nombre, precio: precio }); 
-    mostrarProductosEnCarrito(); 
-    mostrarPrecioTotal(); 
+    carrito.push({ id: id, nombre: nombre, precio: precio });
+    mostrarProductosEnCarrito();
+    mostrarPrecioTotal();
   }
 
   // Funcion para mostrar los productos en el carrito y guardarlos en localStorage
@@ -81,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let total = calcularPrecioTotal();
     totalDiv.textContent = `Precio Total: $${total.toFixed(2)}`;
   }
-  
 
   // Funcion para agregar producto al carrito
   document
@@ -91,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let id = event.target.getAttribute("data-id");
         let nombre = event.target.getAttribute("data-nombre");
         let precio = parseFloat(event.target.getAttribute("data-precio"));
-        agregarAlCarrito(id, nombre, precio); 
+        agregarAlCarrito(id, nombre, precio);
       }
     });
 
@@ -99,27 +98,39 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("borrarProductos")
     .addEventListener("click", function () {
-      carrito = []; 
-      mostrarProductosEnCarrito(); 
-      mostrarPrecioTotal(); 
+      carrito = [];
+      mostrarProductosEnCarrito();
+      mostrarPrecioTotal();
     });
 
-  // Funcion para finalizar la compra y borrar productos del carrito
-  document.getElementById("finalizarCompra").addEventListener("click", function () {
-    Swal.fire({
-        title: "¡Compra finalizada!",
-        text: "¡Gracias por su compra!",
-        icon: "success",
-        confirmButtonText: "Aceptar"
-    }).then((result) => {
+  // Función para finalizar la compra y borrar productos del carrito
+  document
+    .getElementById("finalizarCompra")
+    .addEventListener("click", function () {
+      let precioTotal = calcularPrecioTotal();
+      Swal.fire({
+        title: "¿Estás seguro de finalizar la compra?",
+        text: `El precio total de tu compra es: $${precioTotal.toFixed(2)}`,
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sí, finalizar compra",
+      }).then((result) => {
         if (result.isConfirmed) {
-            carrito = [];
-            mostrarProductosEnCarrito();
-            window.location.reload(); 
+          carrito = [];
+          mostrarProductosEnCarrito();
+          Swal.fire({
+            title: "¡Compra finalizada!",
+            text: "¡Gracias por su compra!",
+            icon: "success",
+            confirmButtonText: "Aceptar",
+          }).then(() => {
+            window.location.reload();
+          });
         }
+      });
     });
-});
-
 
   cargarProductos();
 });
